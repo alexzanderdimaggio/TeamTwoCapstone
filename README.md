@@ -1,2 +1,2 @@
 # TeamTwoCapstone
-new repo
+This is a new repo for Team 2's Capstone project
