@@ -126,8 +126,7 @@
     <section class="client_section layout_padding-bottom pt-5">
         <div class="container">
             <div class="heading_container heading_center psudo_white_primary mb_45">
-                <h2>What Says Our Customers
-        </h2>
+                <h2>Hear From Our Celebrity Endorsers</h2>
             </div>
             <div class="carousel-wrap row ">
                 <div class="owl-carousel client_owl-carousel">
@@ -135,7 +134,7 @@
                         <div class="box">
                             <div class="detail-box">
                                 <h6>Bill Gates</h6>
-                                <h2>_______________</h2>
+                                <h2>__________</h2>
                                 <p>
                                     I've been blown away by the innovation and creativity behind Foodie. 
                                     It's the kind of innovation that reminds me of the early days of Xbox and Microsoft, when we were pushing the boundaries of what technology could do.              
@@ -154,7 +153,7 @@
                         <div class="box">
                             <div class="detail-box">
                                 <h6>Bill Nye</h6>
-                                <h2>_______________</h2>
+                                <h2>__________</h2>
                                 <p>
                                     Science rules, and so does Foodie! As a busy guy who's always exploring new ideas, I need a food delivery service that can keep up. 
                                     The website is like a laboratory of flavors and cuisines. So if you're hungry for something new, give Foodie a try. Trust me, it's a formula for success.
@@ -173,7 +172,7 @@
                         <div class="box">
                             <div class="detail-box">
                                 <h6>Marshall Mathers</h6>
-                                <h2>_______________</h2>
+                                <h2>__________</h2>
                                 <p>
                                     Foodie has been a game-changer for me and my daughter. As a busy professional, I don't always have time to cook or go out to eat, 
                                     but Foodie has made it easy to order meals from all of my favorite restaurants.             
@@ -192,7 +191,7 @@
                         <div class="box">
                             <div class="detail-box">
                                 <h6>Bill Burr</h6>
-                                <h2>_______________</h2>
+                                <h2>__________</h2>
                                 <p>
                                     Foodie is the real deal. Who's got time to cook or go out to eat these days, am I right? 
                                     But with Foodie, I can order my favorite meals from my favorite local restaurants, and it's like having my own chef. The website easy to use, even for a guy like me who's not exactly a tech genius.
