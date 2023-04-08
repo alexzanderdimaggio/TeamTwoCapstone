@@ -138,7 +138,8 @@ namespace CapstoneProject.Admin
                 sda.Fill(dt);
                 txtName.Text = dt.Rows[0]["Name"].ToString();
                 cbIsActive.Checked = Convert.ToBoolean(dt.Rows[0]["IsActive"]);
-                imgCategory.ImageUrl = string.IsNullOrEmpty(dt.Rows[0]["ImageUrl"].ToString()) ? "../Images/No_image.png" : "../" + dt.Rows[0]["ImageUrl"].ToString();
+                imgCategory.ImageUrl = string.IsNullOrEmpty(dt.Rows[0]["ImageUrl"].ToString()) ?
+                    "../Images/No_image.png" : "../" + dt.Rows[0]["ImageUrl"].ToString();
                 imgCategory.Height = 200;
                 imgCategory.Width = 200;
                 hdnId.Value = dt.Rows[0]["CategoryId"].ToString();
