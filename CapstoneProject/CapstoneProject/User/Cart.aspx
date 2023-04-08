@@ -30,7 +30,7 @@
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody>                       
+                        <tbody>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <tr>
@@ -51,7 +51,7 @@
                                     <div class="pro-qty">
                                         <asp:TextBox ID="txtQuantity" runat="server" TextMode="Number" Text='<%# Eval("Quantity") %>'>
                                         </asp:TextBox>
-                                        <asp:RegularExpressionValidator ID="revQuantity" runat="server" ErrorMessage="*" ForeColor="Red" 
+                                        <asp:RegularExpressionValidator ID="revQuantity" runat="server" ErrorMessage="*" ForeColor="Red"
                                             Font-Size="Small" ValidationExpression="[1-9]*" ControlToValidate="txtQuantity"
                                             Display="Dynamic" SetFocusOnError="true" EnableClientScript="true"></asp:RegularExpressionValidator>
                                     </div>
@@ -60,8 +60,8 @@
                         </td>
                         <td>$<asp:Label ID="lblTotalPrice" runat="server"></asp:Label></td>
                         <td>
-                            <asp:LinkButton ID="lbDelete" runat="server" Text="Remove" CommandName="remove" 
-                                CommandArgument='<%# Eval("ProductId") %>' 
+                            <asp:LinkButton ID="lbDelete" runat="server" Text="Remove" CommandName="remove"
+                                CommandArgument='<%# Eval("ProductId") %>'
                                 OnClientClick="return confirm('Do you want to remove this item from cart?');"> 
                                 <i class="fa fa-close"></i></asp:LinkButton>
                         </td>
@@ -76,21 +76,21 @@
                         <td>$<% Response.Write(Session["grandTotalPrice"]); %></td>
                         <td></td>
                     </tr>
-                         <tr>
-                             <td colspan="2" class="continue__btn">
-                                 <a href="Menu.aspx" class="btn btn-info"> <i class="fa fa-arrow-circle-left mr-2"></i>Continue Shopping</a>
-                             </td>
-                             <td>
-                                 <asp:LinkButton ID="lbUpdateCart" runat="server" CommandName="updateCart" CssClass="btn btn-warning">
+                    <tr>
+                        <td colspan="2" class="continue__btn">
+                            <a href="Menu.aspx" class="btn btn-info"><i class="fa fa-arrow-circle-left mr-2"></i>Continue Shopping</a>
+                        </td>
+                        <td>
+                            <asp:LinkButton ID="lbUpdateCart" runat="server" CommandName="updateCart" CssClass="btn btn-warning">
                                      <i class="fa fa-refresh mr-2"></i>Update Cart
-                                 </asp:LinkButton>
-                             </td>
-                             <td>
-                                 <asp:LinkButton ID="lbCheckout" runat="server" CommandName="checkout" CssClass="btn btn-success">
+                            </asp:LinkButton>
+                        </td>
+                        <td>
+                            <asp:LinkButton ID="lbCheckout" runat="server" CommandName="checkout" CssClass="btn btn-success">
                                      Checkout<i class="fa fa-arrow-circle-right ml-2"></i>
-                                 </asp:LinkButton>
-                             </td>
-                         </tr>
+                            </asp:LinkButton>
+                        </td>
+                    </tr>
                     </tbody>
                     </table>
                 </FooterTemplate>

@@ -40,15 +40,22 @@ body {
     color: #111111;
 }
 
-.product__details__option .pro-qty input {
-    border: none;
-    height: 100%;
-    width: 72px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #111111;
-    float: left;
-    text-align: center;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+    .product__details__option .pro-qty input {
+        border: none;
+        height: 100%;
+        width: 82px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #111111;
+        float: left;
+        text-align: center;
+        outline: none;
 }
 
 /*Added for product quantity increasing and decreasing*/
