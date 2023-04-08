@@ -4,10 +4,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
       <!-- about section -->
-
-  <section class="about_section layout_padding">
-    <div class="container  ">
-
+  <section class="about_section_alternate layout_padding">
+    <div class="container">
       <div class="row">
         <div class="col-md-6 ">
           <div class="img-box">
@@ -17,23 +15,31 @@
         <div class="col-md-6">
           <div class="detail-box">
             <div class="heading_container">
-              <h2>
-                We Are Feane
-              </h2>
+              <h2>We Are Foodie</h2>
+                <br />
             </div>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
-            </p>
-            <a href="">
-              Read More
+            <div>
+              Welcome to Foodie, your go-to destination for delicious meals delivered straight to your door. 
+              We're passionate about food and believe that everyone should have access to restaurant-quality cuisine, no matter where they live.     
+               <div>
+                   <br />
+                At Foodie, we partner with top local restaurants to bring you an ever-expanding menu of options to choose from. Whether you're in the mood for 
+                Italian, Chinese, or something in between, we've got you covered. Plus, we offer a range of dietary options, including vegan, gluten-free, and more.
+                   </div>           
+              <div>
+                   <br />
+                We're proud to offer a seamless ordering experience through our user-friendly website and app. Simply enter your address and browse our restaurant partners' menus. 
+                  Once you've made your selection, sit back and relax as we take care of the rest. We'll handle the delivery, so you can focus on enjoying your meal.
+                   </div>
+                </div>
+              <br />
+              <a href="Default.aspx">
+              Order Now
             </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </section>
 
   <!-- end about section -->

@@ -13,7 +13,7 @@
                 <div class="row">
                     <asp:Repeater ID="rCategory" runat="server">
                         <ItemTemplate>
-                            <div class="col-md-6  ">
+                            <div class="col-md-6">
                                 <div class="box ">
                                     <div class="img-box">
                                         <a href="Menu.aspx?id=<%# Eval("CategoryId") %>">
@@ -85,7 +85,6 @@
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>
-
                 </div>
             </div>
         </div>
@@ -96,29 +95,24 @@
     <!-- about section -->
 
     <section class="about_section layout_padding-bottom">
-        <div class="container  ">
+        <div class="container">
 
             <div class="row">
-                <div class="col-md-6 ">
+                <div class="col-md-6 mt-5">
                     <div class="img-box">
                         <img src="../TemplateFiles/images/about-img.png" alt="">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mt-3">
                     <div class="detail-box">
                         <div class="heading_container">
-                            <h2>We Are Feane
-              </h2>
+                            <h2>We Are Foodie</h2>   
                         </div>
                         <p>
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
-           
+                            Welcome to Foodie, your go-to destination for delicious meals delivered straight to your door. 
+                            We're passionate about food and believe that everyone should have access to restaurant-quality cuisine, no matter where they live.          
                         </p>
-                        <a href="">Read More
-            </a>
+                        <a href="About.aspx">Read More</a
                     </div>
                 </div>
             </div>
