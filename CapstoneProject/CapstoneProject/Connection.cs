@@ -54,6 +54,20 @@ namespace CapstoneProject
             return url1;
         }
 
+        public static string GetImageUrlAdmin(Object url)
+        {
+            string url1 = "";
+            if (string.IsNullOrEmpty(url.ToString()) || url == DBNull.Value)
+            {
+                url1 = "../Images/No_image.png";
+            }
+            else
+            {
+                url1 = string.Format("{0}", url);
+            }
+            return url1;
+        }
+
         public bool updateCartQuantity(int quantity, int productId, int userId)
         {
             bool isUpdated = false;

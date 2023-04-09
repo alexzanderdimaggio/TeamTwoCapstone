@@ -49,6 +49,7 @@ namespace CapstoneProject.Admin
             cmd.Parameters.AddWithValue("@Quantity", txtQuantity.Text.Trim());
             cmd.Parameters.AddWithValue("@CategoryId", ddlCategories.SelectedValue);
             cmd.Parameters.AddWithValue("@IsActive", cbIsActive.Checked);
+            cmd.Parameters.AddWithValue("@RestaurantId", Session["restaurantId"]);
             if (fuProductImage.HasFile)
             {
                 if (Utils.IsValidExtension(fuProductImage.FileName))
@@ -105,12 +106,14 @@ namespace CapstoneProject.Admin
             con = new SqlConnection(Connection.GetConnectionString());
             cmd = new SqlCommand("Product_Crud", con);
             cmd.Parameters.AddWithValue("@Action", "SELECT");
+            cmd.Parameters.AddWithValue("@RestaurantId", Session["restaurantId"]);
             cmd.CommandType = CommandType.StoredProcedure;
             sda = new SqlDataAdapter(cmd);
             dt = new DataTable();
             sda.Fill(dt);
+            
             rProduct.DataSource = dt;
-            rProduct.DataBind();
+            rProduct.DataBind();            
         }
 
         private void clear()

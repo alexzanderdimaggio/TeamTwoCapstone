@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="CapstoneProject.Admin.Admin" %>
+<%@ Import Namespace="CapstoneProject" %>
 
 <!DOCTYPE html>
 
@@ -54,6 +55,8 @@
             });
         });
     </script>
+
+
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -132,10 +135,21 @@
                             </ul>
                             <ul class="nav-right">
 
+                                        <%
+                                            string imageUrl = Session["imageUrl"].ToString();
+                                        %>
+
                                 <li class="user-profile header-notification">
-                                    <a href="#!">
-                                        <img src="../assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                        <span>Admin</span>
+                                    <a href="#!" margin-left="0" margin-right="0">
+                                        <img src="<%= "../TemplateFiles/images/" + Utils.GetImageUrlAdmin(imageUrl) %>" id="imgAdmin" style="width:75px; height:75px;" 
+                                            class="img-thumbnail" />
+                                        <span>
+                                            <a href="javascript:void(0)">
+                                                <asp:Label ID="lblUsername" runat="server" ToolTip="Unique Username">
+                                                    <% Response.Write(Session["username"]); %>
+                                                </asp:Label>
+                                            </a>
+                                        </span>
                                         <i class="ti-angle-down"></i>
                                     </a>
                                     <ul class="show-notification profile-notification">

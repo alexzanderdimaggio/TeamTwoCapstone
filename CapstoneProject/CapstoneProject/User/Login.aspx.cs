@@ -26,10 +26,32 @@ namespace CapstoneProject.User
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text.Trim() == "Admin" && txtPassword.Text.Trim() == "123")
+            if(txtUsername.Text.Trim().StartsWith("admin/") && txtPassword.Text.Trim() == "test")
             {
-                Session["admin"] = txtUsername.Text.Trim();
-                Response.Redirect("../Admin/Dashboard.aspx");
+                con = new SqlConnection(Connection.GetConnectionString());
+                cmd = new SqlCommand("Restaurant_Crud", con);
+                cmd.Parameters.AddWithValue("@Action", "SELECT4LOGIN");
+                cmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim());
+                cmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
+                cmd.CommandType = CommandType.StoredProcedure;
+                sda = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                sda.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+                    Session["admin"] = txtUsername.Text.Trim();
+                    Session["imageUrl"] = dt.Rows[0]["ImageUrl"].ToString();
+                    Session["username"] = txtUsername.Text.Trim();
+                    Session["restaurantId"] = Convert.ToInt32((dt.Rows[0]["RestaurantId"]));
+                    Response.Redirect("../Admin/Dashboard.aspx");
+                }
+                else
+                {
+                    lblMsg.Visible = true;
+                    lblMsg.Text = "Invalid Credentials..!";
+                    lblMsg.CssClass = "alert alert-danger";
+                }
             }
             else
             {
