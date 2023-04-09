@@ -33,7 +33,7 @@
                    </div>
                 </div>
               <br />
-              <a href="Default.aspx">
+              <a href="BrowseRestaurants.aspx">
               Order Now
             </a>
             </div>

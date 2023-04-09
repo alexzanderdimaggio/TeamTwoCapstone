@@ -50,6 +50,9 @@ namespace CapstoneProject.User
             cmd.Parameters.AddWithValue("@Address", txtAddress.Text.Trim());
             cmd.Parameters.AddWithValue("@PostCode", txtPostCode.Text.Trim());
             cmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
+
+
+
             if (fuUserImage.HasFile)
             {
                 if (Utils.IsValidExtension(fuUserImage.FileName))

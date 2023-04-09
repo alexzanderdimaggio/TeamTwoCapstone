@@ -111,9 +111,9 @@ namespace CapstoneProject.Admin
             sda = new SqlDataAdapter(cmd);
             dt = new DataTable();
             sda.Fill(dt);
-            
+
             rProduct.DataSource = dt;
-            rProduct.DataBind();            
+            rProduct.DataBind();
         }
 
         private void clear()
@@ -154,7 +154,7 @@ namespace CapstoneProject.Admin
                 txtQuantity.Text = dt.Rows[0]["Quantity"].ToString();
                 ddlCategories.SelectedValue = dt.Rows[0]["CategoryId"].ToString();
                 cbIsActive.Checked = Convert.ToBoolean(dt.Rows[0]["IsActive"]);
-                imgProduct.ImageUrl = string.IsNullOrEmpty(dt.Rows[0]["ImageUrl"].ToString()) ? 
+                imgProduct.ImageUrl = string.IsNullOrEmpty(dt.Rows[0]["ImageUrl"].ToString()) ?
                     "../Images/No_image.png" : "../" + dt.Rows[0]["ImageUrl"].ToString();
                 imgProduct.Height = 200;
                 imgProduct.Width = 200;

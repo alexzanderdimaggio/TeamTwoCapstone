@@ -44,6 +44,8 @@ namespace CapstoneProject.User
             con = new SqlConnection(Connection.GetConnectionString());
             cmd = new SqlCommand("Product_Crud", con);
             cmd.Parameters.AddWithValue("@Action", "ACTIVEPROD");
+            Session["restaurantId"] = 3;
+            cmd.Parameters.AddWithValue("@RestaurantId", Session["restaurantId"]);
             cmd.CommandType = CommandType.StoredProcedure;
             sda = new SqlDataAdapter(cmd);
             dt = new DataTable();

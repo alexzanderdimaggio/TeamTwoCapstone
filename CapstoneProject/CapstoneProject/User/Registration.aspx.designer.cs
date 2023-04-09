@@ -168,7 +168,7 @@ namespace CapstoneProject.User
         protected global::System.Web.UI.WebControls.TextBox txtPostCode;
 
         /// <summary>
-        /// fuUserImage control.
+        /// fuAdminImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
